@@ -2,6 +2,7 @@
 let frigo= ['banana', 'mela', 'pera', 'ciliegia', 'arancia', 'mandarino', 'cocomero', 'limone', 'fragola'];
 btnSnack1.addEventListener('click',function(){
     inputGroup.classList.remove('d-none');
+    btnSnack3Control.classList.add('d-none');
     btnSnack2Control.classList.add('d-none');
     btnSnack1Control.classList.remove('d-none');
     divRisposta.innerHTML='che frutta abbiamo sul tavolo che devo mettere in frigo? (scrivi nella casella di input facendo attenzione a scrivere una cosa alla volta e poi premere invio)';
