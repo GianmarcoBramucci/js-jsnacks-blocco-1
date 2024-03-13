@@ -36,26 +36,26 @@ btnSnack3Control.addEventListener('click',function(){
             divRisposta.innerHTML='fra dai te avevo detto che non doveva essere uguale';
         }
         else if(userNum > lastNum){
-            risultato = lastNum;
+            risultato = userNum;
             divRisposta.innerHTML='fra te dico il SECONDO array e quello piu grosso mo aggiungo qualsosa al PRIMO'
         }
-        else if(userNum < lastNum){
-            risultato = userNum;
+        else if(lastNum  > userNum){
+            risultato = lastNum;
             divRisposta.innerHTML='fra te dico il PRIMO array e quello piu grosso mo aggiungo qualsosa al SECONDO';
         }
-        last++;
+        last3++;
     }
     else if(last3<4){
         for(let i = 0;i<risultato;i++){
             if(risultato == userNum){
-                lastNum.push(getRndInteger(min,max));
-                stampaAray = `  ${stampaAray}   ${lastNum[i]}  `;
+                array2.push(getRndInteger(min,max));
+                stampaAray = `  ${stampaAray}   ${array2[i]}  `;
             }
             else if(risultato == lastNum){
-                userNum.push(getRndInteger(min,max));
-                stampaAray = `  ${stampaAray}   ${userNum[i]}  `;
+                array3.push(getRndInteger(min,max));
+                stampaAray = `  ${stampaAray}   ${array3[i]}  `;
             }
-            divRisposta.innerHTML=`l'aray pompato${stampaAray}`;
+            divRisposta.innerHTML=`l'aray pompato: ${stampaAray}`;
             last3 = 0;
             lastNum = 0;
             array2= [];
